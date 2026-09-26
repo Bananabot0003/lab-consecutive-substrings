@@ -1,2 +1,24 @@
-Please add your pseudocode to this file
-And a written explanation of your solution
+FUNCTION consecutiveSubstrings(string)
+
+    SET substrings to an empty array
+
+    FOR i from 0 to the length of string
+        FOR j from i + 1 to the length of string
+            SET substring to the part of string from i to j
+            ADD substring to substrings
+        END FOR
+    END FOR
+
+    RETURN substrings
+
+END FUNCTION
+
+
+My solution uses two loops to find all of the consecutive substrings.
+The first loop goes through each character in the string 
+and chooses where the substring will start. The second loop chooses 
+where the substring will end. I use slice() to get the substring between 
+those positions and push() to add it to the substrings array. 
+After the loops finish, the function returns the array. The time complexity 
+is O(n^2) because I use a nested loop. As the length of the string increases, 
+the number of possible substrings also increases.
